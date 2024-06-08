@@ -1,15 +1,64 @@
 <html>
   <head>
     <link href="styles/style.css" rel="stylesheet" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+      .img_box {
+	  width: 800px;
+	  box-shadow: 5px 5px 5px rgb(20,20,20);
+	  margin-bottom: 30px;
+	  background: rgb(20,20,20);			
+      }
+
+      .img_box:hover {
+	  box-shadow: 2px 2px 2px rgb(10,10,10);
+      }
+      .caption {
+	  text-align: center;
+      }
+    </style>
+
   </head>
   <body>
-    <h1>Astrophotography by Janne Kontkanen</h1>
     <center>
-  <img src='images/m81-lrgb_s4.jpg' width="800">
-  <p>M81 Bode's, Bonnie Claire 5/2024, EdgeHD 8, ASI294mm pro, 68*3L+36*3R+21*3G+33*3B=8h, LAB</p>
+      <h1>Astrophotography by Janne Kontkanen</h1>
 
-  <img src='images/m45-hdr.jpg' width="800">
-  <p>M45 Pleiades, WO Zenithstar 73, ASI294mm pro</p> 
-  </center>
+      <p>This page documents my astrophotography journey. Like many others I began by attempting to take Milky Way photos with my cellphone. I was first inspired by the <a href="https://research.google/blog/experimental-nighttime-photography-with-nexus-and-pixel/">Pixel phone photos</a> of Florian Kainz with whom I used to work with at Google. That we got into RV camping to fight the boredom of the pandemic in 2020 definitely helped by providing almost unlimited access to starry skies.
+
+	While cell phone is a great entry point to this hobby, I continued via DSLR and lightweight star trackers to computerized mounts, dedicated telescopes, astrocameras and many trips to dark skies far away from light pollution.</p>
+      <p>
+	Why I do this, I am still not 100% sure. It is certainly a time-sink and you can hardly dream of competing with James Webb and Hubble space telescopes. Perhaps one day I'll discover my own nebula or something. Or contribute to the field with an algorithm. The latter is probably more likely given my life-long background in computer graphics, vision and machine learning research. However, I still consider myself a beginner. This hobby has a very steep learning curve. So at this point rather I prefer to say I do this  <i>just because I like it</i>.
+      </p>
+
+    <p>
+      The reason I made a dedicated web-page is that I have not identified a photo sharing platform that supports HDR-images and displays the content the way I like it. HDR & deep sky astrophotography is not a common thing to see, so here you have it (assuming you have access to Chrome browser and HDR-capable display). 
+    </p>
+    </center>
+    
+    <center>      
+    <div id="photocontainer">
+    </div>
+    </center>
+    
+  <script type="text/javascript">
+    container = document.getElementById("photocontainer");
+    var images = [];
+    images.push({file: "images/m81-lrgb_s4.jpg", description: "M81 Bode's Galaxy, Bonnie Claire 5/2024, EdgeHD 8, ASI294mm pro, 68*3L+36*3R+21*3G+33*3B=8h, LAB"})    
+    images.push({file: "images/ngc6995-hdr.jpg", description: "NGC 6995 Eastern Veil Nebula, Grand View Campground 2023. WO Zenithstar 73 & ASI294mm pro, HOO"})
+    images.push({file: "images/ngc6960-grandview-2023-edit-2024_5-2.jpg", description: "NGC 6960 Western Veil Nebula, Grand View Campground 2023. WO Zenithstar 73 & ASI294mm pro, HOO"})
+    
+    images.push({file: "images/m45-hdr.jpg", description: "M45 Pleiades, Kelbaker Road Mojave 11/2023, WO Zenithstar 73, ASI294mm pro, 40*3R+40*3G+40*3B+60*3L=9h"})
+//    images.push({file: "images/rv-aurora-hdr.jpg", description: "Aurora and Milky Way above my camp. Aurora's were much stronger towards the North, but I managed to get some on the same frame with Milky Way (to the south) anyway. Bonnie Claire 5/2024, Fuji X-T1, Rokinon 14mm, 15s, ISO 1250"}) 
+//    images.push({file: "images/rv-aurora-lights-hdr.jpg", description: "Aurora Borealis and Milky Way. I wouldn't normally turn on my lights in the middle of the night but that night I had messed up my batteries and had to run the engine a bit to get things back on track.  Bonnie Claire 5/2024, Fuji X-T1, Rokinon 14mm, 15s, ISO 1250"})
+    images.push({file: "images/rv-milkyway-bonnie-claire-hdr.jpg", description: "Milky Way and the RV. Bonnie Claire 2023, Fuji X-T1, Rokinon 12mm, 20s, ISO 2000"})
+    images.push({file: "images/rv-fire-2-bonnie-claire-hdr.jpg", description: "Campfire, Bonnie Claire 2023, Fuji X-T1, Rokinon 12mm, 20s, ISO 400"})        
+    for(var i = 0; i < images.length; i++) {
+	var image = images[i]
+	container.innerHTML += "<div class='img_box'><a href='" + image.file + "'><img src='" + image.file + "'></img></a><div class='caption'>" + image.description + "</div></div>" 
+    }
+  </script>
+
+    </center>
   </body>
 </html\>

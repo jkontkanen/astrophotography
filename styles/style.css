@@ -1,11 +1,18 @@
 body {
-    background-color: black;
-    color: darkgray;
+    background: rgb(43,40,43);
+    color: rgb(85,75,85);
     font-family: Tahoma;
 }
 p {
     font-family: Arial;
+    text-align: left;
+    width:800
 }
 img {
     font-family: Arial;
+    width:800
+}
+
+a {
+    color: rgb(90,80,90);
 }

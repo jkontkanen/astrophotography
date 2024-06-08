@@ -1,0 +1,7 @@
+body {}
+p {
+    font-family: Arial;
+}
+img {
+    font-family: Arial;
+}
