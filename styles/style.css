@@ -25,7 +25,8 @@ p {
 }
 .float_caption {
     #    background: rgb(30,30,30);
-    text-align: left
+    text-align: left;
+    font-family: Tahoma;
 }
 .intro_container {
     width:800;
