@@ -1,18 +1,35 @@
 body {
-    background: rgb(43,40,43);
+    background: rgb(40,40,40);
     color: rgb(85,75,85);
     font-family: Tahoma;
 }
 p {
     font-family: Arial;
     text-align: left;
-    width:800
+    width:800;
 }
-img {
+.img_photos {
     font-family: Arial;
     width:800
 }
-
+.img_float {
+    float:right;
+    width:200;
+}
+.float_box {
+    width:200;
+    margin-top:20;
+    margin-right:20;
+    margin-left: 20;
+    float:right;
+}
+.float_caption {
+    #    background: rgb(30,30,30);
+    text-align: left
+}
+.intro_container {
+    width:800;
+}
 a {
     color: rgb(90,80,90);
 }
