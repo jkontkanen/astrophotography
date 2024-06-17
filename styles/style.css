@@ -16,6 +16,13 @@ p {
     float:right;
     width:20vw;
 }
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
 .float_box {
     width:20vw;
     margin-top:10;
