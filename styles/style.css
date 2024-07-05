@@ -6,11 +6,16 @@ body {
 p {
     font-family: Arial;
     text-align: left;
-    width:90vw;
+    width:80vw;
 }
-.img_photos {
+.img_landscape {
     font-family: Arial;
-    width:90vw;
+    width:80vw;
+}
+.img_portrait {
+    font-family: Arial;
+    max-width:80vw;
+    max-height:1000px;
 }
 .img_float {
     float:right;

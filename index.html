@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
       .img_box {
-	  width: 90vw;
+	  width:80vw;
 	  box-shadow: 6px 6px 6px rgb(20,20,20);
 	  margin-bottom: 30px;
 	  background: rgb(20,20,20);			
@@ -53,22 +53,23 @@ I made this page to display the images the way I want in HDR (assuming a capable
   <script type="text/javascript">
     container = document.getElementById("photocontainer");
     var images = [];
-    images.push({file: "images/ngc7635.jpg", description: "NGC 7635 The Bubble Nebula in Hubble Palette, Highway 50 'The Loneliest Road of America', 7/4/2024, EdgeHD 8, ASI294mm pro,  60*3S+60*3H+60*3O=9h + RGB stars"})
-    images.push({file: "images/ngc6995-hdr.jpg", description: "NGC 6995 Eastern Veil Nebula, Grand View Campground 2023. WO Zenithstar 73 & ASI294mm pro, HOO"})
-    images.push({file: "images/ngc6960-grandview-2023-edit-2024_5-2.jpg", description: "NGC 6960 Western Veil Nebula, Grand View Campground 2023. WO Zenithstar 73 & ASI294mm pro, HOO"})
-    images.push({file: "images/m81-lrgb_s4.jpg", description: "M81 Bode's Galaxy, Bonnie Claire 5/2024, EdgeHD 8, ASI294mm pro, 68*3L+36*3R+21*3G+33*3B=8h, LAB"})        
-    images.push({file: "images/m45-hdr.jpg", description: "M45 Pleiades, Kelbaker Road Mojave 11/2023, WO Zenithstar 73, ASI294mm pro, 40*3R+40*3G+40*3B+60*3L=9h"})
-    images.push({file: "images/moon-hdr.jpg", description: "Moon, San Francisco 6/2024, WO Zenithstar 73, ASI2600mc pro, ~700 frames lucky imaging"})
+    images.push({file: "images/m16-hdr.jpg", description: "M16, Eagle Nebula a.k.a Pillars of Creation in Hubble Palette, Highway 50 'The Loneliest Road of America', 7/4/2024, EdgeHD 8, ASI294mm pro, 60*3S+60*3H+60*3O=9h (+RGB stars)", class:"img_portrait"})
+    images.push({file: "images/ngc7635.jpg", description: "NGC 7635 The Bubble Nebula in Hubble Palette, Highway 50 'The Loneliest Road of America', 7/4/2024, EdgeHD 8, ASI294mm pro,  60*3S+60*3H+60*3O=9h + RGB stars", class:"img_landscape"})
+    images.push({file: "images/ngc6995-hdr.jpg", description: "NGC 6995 Eastern Veil Nebula, Grand View Campground 2023. WO Zenithstar 73 & ASI294mm pro, HOO", class:"img_landscape"})
+    images.push({file: "images/ngc6960-grandview-2023-edit-2024_5-2.jpg", description: "NGC 6960 Western Veil Nebula, Grand View Campground 2023. WO Zenithstar 73 & ASI294mm pro, HOO", class:"img_landscape"})
+    images.push({file: "images/m81-lrgb_s4.jpg", description: "M81 Bode's Galaxy, Bonnie Claire 5/2024, EdgeHD 8, ASI294mm pro, 68*3L+36*3R+21*3G+33*3B=8h, LAB", class:"img_landscape"})        
+    images.push({file: "images/m45-hdr.jpg", description: "M45 Pleiades, Kelbaker Road Mojave 11/2023, WO Zenithstar 73, ASI294mm pro, 40*3R+40*3G+40*3B+60*3L=9h", class:"img_landscape"})
+    images.push({file: "images/moon-hdr.jpg", description: "Moon, San Francisco 6/2024, WO Zenithstar 73, ASI2600mc pro, ~700 frames lucky imaging", class:"img_landscape"})
 //    images.push({file: "images/rv-aurora-hdr.jpg", description: "Aurora and Milky Way above my camp. Aurora's were much stronger towards the North, but I managed to get some on the same frame with Milky Way (to the south) anyway. Bonnie Claire 5/2024, Fuji X-T1, Rokinon 14mm, 15s, ISO 1250"}) 
 //    images.push({file: "images/rv-aurora-lights-hdr.jpg", description: "Aurora Borealis and Milky Way. I wouldn't normally turn on my lights in the middle of the night but that night I had messed up my batteries and had to run the engine a bit to get things back on track.  Bonnie Claire 5/2024, Fuji X-T1, Rokinon 14mm, 15s, ISO 1250"})
-    images.push({file: "images/rv-milkyway-bonnie-claire-hdr.jpg", description: "Milky Way and the RV. Bonnie Claire 2023, Fuji X-T1, Rokinon 12mm, 20s, ISO 2000"})
-    images.push({file: "images/rv-fire-2-bonnie-claire-hdr.jpg", description: "Campfire, Bonnie Claire 2023, Fuji X-T1, Rokinon 12mm, 20s, ISO 400."})
-    images.push({file: "images/grandview-hdr-4.jpg", description: "Grandview Campground 2023, Fuji X-T1, Rokinon 12mm, 20s, ISO 2000."})
-    images.push({file: "images/rv-aurora-hdr-2.jpg", description: "By luck, I was in Bonnie Claire when the grand aurora event of 2024/5 hit. Checkout the <a href='https://youtu.be/EIUFlxrEP2k?si=tIq-2OvTTzleXyKm'>timelapse</a> I made."})
-    images.push({file: "images/rv-aurora-milkyway-hdr.jpg", description: "Aurora, the Milky Way, and my desperate attempt to charge dying RV batteries (thus the engine on)."})
+    images.push({file: "images/rv-milkyway-bonnie-claire-hdr.jpg", description: "Milky Way and the RV. Bonnie Claire 2023, Fuji X-T1, Rokinon 12mm, 20s, ISO 2000", class:"img_landscape"})
+    images.push({file: "images/rv-fire-2-bonnie-claire-hdr.jpg", description: "Campfire, Bonnie Claire 2023, Fuji X-T1, Rokinon 12mm, 20s, ISO 400.", class:"img_landscape"})
+    images.push({file: "images/grandview-hdr-4.jpg", description: "Grandview Campground 2023, Fuji X-T1, Rokinon 12mm, 20s, ISO 2000.", class:"img_landscape"})
+    images.push({file: "images/rv-aurora-hdr-2.jpg", description: "By luck, I was in Bonnie Claire when the grand aurora event of 2024/5 hit. Checkout the <a href='https://youtu.be/EIUFlxrEP2k?si=tIq-2OvTTzleXyKm'>timelapse</a> I made.", class:"img_landscape"})
+    images.push({file: "images/rv-aurora-milkyway-hdr.jpg", description: "Aurora, the Milky Way, and my desperate attempt to charge dying RV batteries (thus the engine on).", class:"img_landscape"})
     for(var i = 0; i < images.length; i++) {
 	var image = images[i]
-	container.innerHTML += "<div class='img_box'><a href='" + image.file + "'><img class=img_photos src='" + image.file + "'></img></a><div class='caption'>" + image.description + "</div></div>" 
+	container.innerHTML += "<div class='img_box'><a href='" + image.file + "'><img class=" + image.class + " src='" + image.file + "'></img></a><div class='caption'>" + image.description + "</div></div>" 
     }
   </script>
 
