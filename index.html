@@ -35,10 +35,12 @@ Why do I do this? Astrophotography is a time-sink and you will not be able compe
   <script type="text/javascript">
     container = document.getElementById("photocontainer");
     var images = [];
+    var skipped = []
 
+    images.push({file: "images/tadpoles-bonnie-claire-2025.jpg", description: "Tadpoles nebula in Hubble palette, Bonnie Claire 2025, C8 EdgeHD + ASI294mm pro, SHO for the nebula and RGB for the stars"})
     images.push({file: "images/m8-route-50.jpg", description: "M8 and M20, U.S Route 6, Nevada, 2024. WO Zenithstar 73 & ASI2600mc pro. RGB 80*3 min ~ 4h (+ 30min for stars)", type: "landscape"})
     images.push({file: "images/m16-route-50-p.jpg", description: "M16 The Eagle Nebula, a.k.a Pillars of Creation in the Hubble Palette, U.S. Route. 50, Nevada, 2024. C8 EdgeHD, ASI 294mm pro. 110S 70H 110O ~ 14.5h (+ 90 min for stars)", type: "portrait"})
-    images.push({file: "images/m20-route-6-p.jpg", description: "M20 The Trifid Nebula in HOO-palette, U.S. Route 6, Nevada, 2024. 30*3H 30*3O ~ 3h (+ 90min for stars). It was windy and had a bit of a problem with cables getting tangled so got a limited amount of good data on this one.", type: "portrait"})
+    skipped.push({file: "images/m20-route-6-p.jpg", description: "M20 The Trifid Nebula in HOO-palette, U.S. Route 6, Nevada, 2024. 30*3H 30*3O ~ 3h (+ 90min for stars). It was windy and had a bit of a problem with cables getting tangled so got a limited amount of good data on this one.", type: "portrait"})
     images.push({file: "images/m31-route-50.jpg", description: "M31 The Andromeda Galaxy, U.S. Route 50 'The Loneliest Road in America', 7/4/2024, WO Zenithstar 73 & ASI2600mc, 3*140 ~ 7h (+15min for stars)", type: "landscape"})
     images.push({file: "images/ngc7635-route-50-p.jpg", description: "NGC 7635 The Bubble Nebula in Hubble Palette, U.S Route 50, 7/4/2024, C8 EdgeHD, ASI294mm pro,  60*3S 60*3H 60*3O ~ 9h (+RGB stars)", type: "portrait"})
     images.push({file: "images/heart-nebula.jpg", description: "Heart Nebula in SHO, Kelbaker Road, Mojave Desert, California 11/2023. WO Zenithstar 73 & ASI294mm pro. 130S 60H 135O ~ 16.5h", type: "landscape"})
